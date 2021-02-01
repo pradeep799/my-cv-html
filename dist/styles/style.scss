@@ -7,34 +7,27 @@ $clr-primary: #020230;
 }
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
-ul {
-  list-style: none;
-}
+
 .container {
   width: 85%;
   margin: 1rem auto;
 }
-.block-one,
-.block-two {
-  height: 100vh;
-  border-left: thin solid $clr-primary;
-}
+
 .block-one {
   background-color: #dfdede;
   z-index: -1;
 }
 .block-two {
+  border-left: thin solid $clr-primary;
 }
 .title {
   position: relative;
   color: #ffffff;
   margin-left: 1rem;
   margin: 1rem 0;
-
   z-index: 10;
 }
 .title::before {
@@ -56,9 +49,9 @@ main.grid {
 }
 .img__container {
   margin: 2rem auto;
-  height: 8vw;
+  height: 10vw;
   width: 10vw;
-  background: url("../img/59.jpg") center center/cover no-repeat;
+  background: url("../img/image.jpg") center top/cover no-repeat;
   position: relative;
   &::before {
     content: "";
@@ -72,25 +65,13 @@ main.grid {
     transform: skewX(8deg);
   }
 }
-ul {
-  li {
-    display: flex;
-    margin-bottom: 0.5rem;
-
-    i {
-      width: 1rem;
-      margin-right: 1rem;
-      margin-top: 0.2rem;
-      margin-left: 0.5rem;
-    }
-  }
-}
 
 //block two
 
 .heading {
   h1 {
     line-height: 1.1;
+    margin-bottom: 0.5rem;
   }
   h4 {
     position: relative;
@@ -123,7 +104,20 @@ ul {
 }
 
 //end of skills
+//contact details
+ul.contact__details {
+  list-style: none;
+  li {
+    display: flex;
+    margin-bottom: 0.5rem;
 
+    i {
+      width: 1rem;
+      margin: 0.2rem 1rem 0 0.5rem;
+    }
+  }
+}
+//end of contact details
 //education
 
 .edu__grid {
@@ -173,3 +167,62 @@ ul {
 }
 
 //end education
+@media screen and (max-width: 768px) {
+  main.grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "two" "one";
+    .college__container {
+      &::after {
+        left: 0;
+      }
+      &::before {
+        left: -2px;
+      }
+      &__last::before {
+        left: -2px;
+      }
+    }
+    .block-two {
+      border: none;
+      grid-area: two;
+      background-color: #dfdede;
+      // text-align: center;
+    }
+    .block-one {
+      grid-area: one;
+    }
+    .img__container {
+      display: none;
+    }
+  }
+}
+
+@media print {
+  main.grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "two" "one";
+    .college__container {
+      &::after {
+        left: 0;
+      }
+      &::before {
+        left: -2px;
+      }
+      &__last::before {
+        left: -2px;
+      }
+    }
+    .block-two {
+      border: none;
+      grid-area: two;
+      background-color: #fff;
+      // text-align: center;
+    }
+    .block-one {
+      grid-area: one;
+    }
+    .img__container {
+      display: none;
+    }
+  }
+}
