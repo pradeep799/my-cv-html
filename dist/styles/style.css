@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 85%;
+  margin: 1rem auto;
+}
+
+.block-one,
+.block-two {
+  height: 100vh;
+  border-left: thin solid #020230;
+}
+
+.block-one {
+  background-color: #dfdede;
+  z-index: -1;
+}
+
+.title {
+  position: relative;
+  color: #ffffff;
+  margin-left: 1rem;
+  margin: 1rem 0;
+  z-index: 10;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: -10%;
+  left: -1rem;
+  bottom: -15%;
+  width: 100%;
+  background-color: #020230;
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
+}
+
+main.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+}
+
+.img__container {
+  margin: 2rem auto;
+  height: 8vw;
+  width: 10vw;
+  background: url("../img/59.jpg") center center/cover no-repeat;
+  position: relative;
+}
+
+.img__container::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  bottom: -1rem;
+  left: -1rem;
+  right: -1rem;
+  z-index: -1;
+  background-color: #020230;
+  -webkit-transform: skewX(8deg);
+          transform: skewX(8deg);
+}
+
+ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+ul li i {
+  width: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.heading h1 {
+  line-height: 1.1;
+}
+
+.heading h4 {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.heading h4::before {
+  content: "";
+  position: absolute;
+  top: 110%;
+  width: 4rem;
+  height: 0.25rem;
+  border-radius: 5px;
+  background-color: #020230;
+}
+
+.skills__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills__container .skill {
+  border: 1px solid #020230;
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+  margin: 0.5rem 0.3rem;
+}
+
+.edu__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+.edu__grid .year {
+  padding: 1rem;
+}
+
+.college__container {
+  padding: 1rem;
+  position: relative;
+}
+
+.college__container::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: -34px;
+  width: 2px;
+  height: 100%;
+  background-color: #020230;
+}
+
+.college__container::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: -36px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #020230;
+}
+
+.college__container__last {
+  padding: 1rem;
+  position: relative;
+}
+
+.college__container__last::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: -36px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #020230;
+}
+/*# sourceMappingURL=style.css.map */
