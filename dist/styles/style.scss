@@ -66,8 +66,6 @@ main.grid {
   }
 }
 
-//block two
-
 .heading {
   h1 {
     line-height: 1.1;
@@ -115,6 +113,10 @@ ul.contact__details {
       width: 1rem;
       margin: 0.2rem 1rem 0 0.5rem;
     }
+  }
+  .website__link {
+    text-decoration: none;
+    color: black;
   }
 }
 //end of contact details
@@ -173,13 +175,13 @@ ul.contact__details {
     grid-template-areas: "two" "one";
     .college__container {
       &::after {
-        left: 0;
+        left: -5px;
       }
       &::before {
-        left: -2px;
+        left: -7px;
       }
       &__last::before {
-        left: -2px;
+        left: -7px;
       }
     }
     .block-two {
@@ -194,6 +196,19 @@ ul.contact__details {
     .img__container {
       display: none;
     }
+
+    .inner-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "skills" "contact";
+      .skills {
+        grid-area: skills;
+      }
+
+      .contact {
+        grid-area: contact;
+      }
+    }
   }
 }
 
@@ -203,13 +218,13 @@ ul.contact__details {
     grid-template-areas: "two" "one";
     .college__container {
       &::after {
-        left: 0;
+        left: -15px;
       }
       &::before {
-        left: -2px;
+        left: -17px;
       }
       &__last::before {
-        left: -2px;
+        left: -17px;
       }
     }
     .block-two {
@@ -219,10 +234,23 @@ ul.contact__details {
       // text-align: center;
     }
     .block-one {
+      background-color: #fff;
       grid-area: one;
     }
     .img__container {
       display: none;
+    }
+  }
+  .inner-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "skills" "contact";
+    .skills {
+      grid-area: skills;
+    }
+
+    .contact {
+      grid-area: contact;
     }
   }
 }

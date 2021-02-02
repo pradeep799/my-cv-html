@@ -125,6 +125,11 @@ ul.contact__details li i {
   margin: 0.2rem 1rem 0 0.5rem;
 }
 
+ul.contact__details .website__link {
+  text-decoration: none;
+  color: black;
+}
+
 .edu__grid {
   display: -ms-grid;
   display: grid;
@@ -185,13 +190,13 @@ ul.contact__details li i {
         grid-template-areas: "two" "one";
   }
   main.grid .college__container::after {
-    left: 0;
+    left: -5px;
   }
   main.grid .college__container::before {
-    left: -2px;
+    left: -7px;
   }
   main.grid .college__container__last::before {
-    left: -2px;
+    left: -7px;
   }
   main.grid .block-two {
     border: none;
@@ -208,6 +213,23 @@ ul.contact__details li i {
   main.grid .img__container {
     display: none;
   }
+  main.grid .inner-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "skills" "contact";
+  }
+  main.grid .inner-grid .skills {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: skills;
+  }
+  main.grid .inner-grid .contact {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: contact;
+  }
 }
 
 @media print {
@@ -217,13 +239,13 @@ ul.contact__details li i {
         grid-template-areas: "two" "one";
   }
   main.grid .college__container::after {
-    left: 0;
+    left: -15px;
   }
   main.grid .college__container::before {
-    left: -2px;
+    left: -17px;
   }
   main.grid .college__container__last::before {
-    left: -2px;
+    left: -17px;
   }
   main.grid .block-two {
     border: none;
@@ -233,12 +255,30 @@ ul.contact__details li i {
     background-color: #fff;
   }
   main.grid .block-one {
+    background-color: #fff;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: one;
   }
   main.grid .img__container {
     display: none;
+  }
+  .inner-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "skills" "contact";
+  }
+  .inner-grid .skills {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: skills;
+  }
+  .inner-grid .contact {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: contact;
   }
 }
 /*# sourceMappingURL=style.css.map */
